@@ -1,0 +1,14 @@
+Allocation To Live
+
+<h2>Import Products</h2>
+
+<p>
+  Download:
+  <%= link_to "CSV", products_path(format: "csv") %> |
+  <%= link_to "Excel", products_path(format: "xls") %>
+</p>
+
+<%= form_tag import_products_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>

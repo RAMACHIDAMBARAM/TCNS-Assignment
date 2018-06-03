@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="Number">ID</Data></Cell>
+        <Cell><Data ss:Type="String">products_code</Data></Cell>
+        <Cell><Data ss:Type="String">added_date</Data></Cell>
+        <Cell><Data ss:Type="String">mrp</Data></Cell>
+        <Cell><Data ss:Type="String">brands_code</Data></Cell>
+        <Cell><Data ss:Type="String">categories_code</Data></Cell>
+        <Cell><Data ss:Type="String">group_code</Data></Cell>
+        <Cell><Data ss:Type="String">products_fabric</Data></Cell>
+        <Cell><Data ss:Type="String">tax_percent</Data></Cell>
+        <Cell><Data ss:Type="String">products_color</Data></Cell>
+        <Cell><Data ss:Type="String">stylist_says</Data></Cell>
+        <Cell><Data ss:Type="String">products_description</Data></Cell>
+        <Cell><Data ss:Type="String">products_length</Data></Cell>
+        <Cell><Data ss:Type="String">archived</Data></Cell>
+        <Cell><Data ss:Type="String">product_team</Data></Cell>
+        <Cell><Data ss:Type="String">products_neck</Data></Cell>
+        <Cell><Data ss:Type="String">products_title</Data></Cell>
+        <Cell><Data ss:Type="String">product_varients</Data></Cell>
+        <Cell><Data ss:Type="String">products_sleev</Data></Cell>
+        <Cell><Data ss:Type="String">story_code</Data></Cell>
+        <Cell><Data ss:Type="String">product_sizes</Data></Cell>
+        <Cell><Data ss:Type="String">products_washcare</Data></Cell>
+        <Cell><Data ss:Type="String">seasons_code</Data></Cell>
+
+      </Row>
+    <% @products.each do |product| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= product.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.products_code %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.added_date %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.mrp %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.brands_code %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.categories_code %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.group_code %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.products_fabric %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.tax_percent %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.products_color %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.stylist_says %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.products_descriptiont %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.products_length %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.archived %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.product_team %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.products_neck %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.products_title%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.product_varients %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.products_sleev %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.story_code %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.product_sizes %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.products_washcare %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= product.seasons_code %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
